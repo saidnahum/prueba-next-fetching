@@ -7,7 +7,7 @@ import { useQuery } from 'react-query';
 const API_URL = 'https://jsonplaceholder.ir/graphql';
 const graphQLClient = new GraphQLClient(API_URL);
 
-const reactQuery = () => {
+const ReactQuery = () => {
 
    const { data: postsData, isLoading, error } = useQuery("posts", async () => {
       return await graphQLClient.request(gql`
@@ -53,4 +53,4 @@ const reactQuery = () => {
    )
 }
 
-export default reactQuery;
+export default ReactQuery;
